@@ -40,7 +40,7 @@ def generate_response(documents, query):
     response = f"Based on the query: '{query}', the most relevant content from the documents is:\n\n{context}"
     return response
 
-def chatbot(vector_store_url="https://ecb22197-cfb8-4886-a86c-80218e4ac74f.eu-central-1-0.aws.cloud.qdrant.io:6333", api_key="NnSHRelCDU7Xl-CLRlmq50c0kMc9K0eOP3kShF8TjY_CjrBFyiYsHg"):
+def chatbot(vector_store_url="https://localhost:6333", api_key="API KEY"):
     """Chatbot that queries the Qdrant vector store and generates responses."""
     client = QdrantClient(url=vector_store_url, api_key=api_key)
     collection_name = "pdf_documents_bge"
